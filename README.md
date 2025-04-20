@@ -263,7 +263,7 @@ Se conecta con una base de datos MySQL (rufus) a través de PHP (en una carpeta 
 
 Este proyecto utiliza una base de datos MySQL llamada `users`. 
 
-[Base de datos](./database/users.sql)
+[Base de datos](backend-rufus/database/users.sql)
 
 Para importarla al servidor local:
 
