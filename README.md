@@ -270,7 +270,7 @@ Para importarla al servidor local:
 1. Abre [phpMyAdmin](http://localhost/phpmyadmin)
 2. Crea una base de datos llamada `users`
 3. Ve a la pestaña "Importar"
-4. Selecciona el archivo `b.sql` y haz clic en "Continuar"
+4. Selecciona el archivo `users.sql` y haz clic en "Continuar"
 
 
 ## Estructura del proyecto
