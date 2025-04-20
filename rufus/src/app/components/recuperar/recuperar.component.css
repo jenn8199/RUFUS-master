@@ -1,0 +1,107 @@
+/* Fondo con imagen de recuperación */
+.fondo-recuperar {
+    background-image: url('/assets/img/recuperar.jpg'); /* Ruta relativa a la carpeta assets */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+  }
+  
+  /* Contenedor principal con efecto difuminado (glassmorphism) */
+  .recuperar-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+  
+    /* Fondo translúcido blanco */
+    background: rgba(255, 255, 255, 0.15);
+  
+    /* Borde sutil */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  
+    /* Difuminado */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.5s ease-in-out;
+    max-width: 90vw;
+  }
+  
+  /* Título elegante */
+  .recuperar-container h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 25px;
+  }
+  
+  /* Etiquetas del formulario */
+  .form-label {
+    color: #f8f9fa;
+    font-weight: 500;
+  }
+  
+  /* Estilo del input */
+  .form-control {
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.7);
+    color: #000;
+    border: none;
+  }
+  
+  /* Borde rojo para input inválido */
+  input.ng-touched.ng-invalid {
+    border: 1px solid #dc3545;
+  }
+  
+  /* Mensaje de error */
+  .invalid-feedback {
+    font-size: 0.85rem;
+    color: #dc3545;
+  }
+  
+  /* Botón principal morado */
+  .btn-primary {
+    background-color: #893dd7;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover del botón */
+  .btn-primary:hover {
+    background-color: #a384b2;
+  }
+  
+  /* Botón de volver */
+  .btn-secondary {
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+  
+  /* Mensajes de respuesta */
+  .alert {
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    text-align: center;
+  }
+  
+  /* Animación de entrada suave */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

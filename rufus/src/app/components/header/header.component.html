@@ -1,0 +1,25 @@
+<!-- Barra de navegación -->
+<ul class="nav">
+  <li class="nav-item nav-left">
+    <i class="fas fa-play"></i>
+  </li>
+
+  <li class="nav-item nav-title">
+    <a [routerLink]="['/peliculas']" class="nav-link-title">RUFUS</a>
+  </li>
+
+  <li class="nav-item nav-right">
+    <a [routerLink]="['/peliculas']" class="nav-link">Home</a>
+  </li>
+
+  <li class="nav-item nav-right perfil-dropdown">
+    <span id="perfilBtn">Perfil <i class="fas fa-user"></i></span>
+    <div id="menuPerfil" class="menu-perfil">
+      <a [routerLink]="['/login']">Cerrar sesión</a>
+    </div>
+  </li>      
+
+  <li class="nav-item nav-right">
+    <button id="darkToggle" class="nav-link">🌙</button>
+  </li>  
+</ul>

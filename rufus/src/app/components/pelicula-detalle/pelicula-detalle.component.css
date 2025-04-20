@@ -1,0 +1,111 @@
+
+/* Estilos para la pelicula.html */
+.container-pelicula, .fondo-gif {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Toma toda la altura de la pantalla */
+    overflow: hidden;
+}
+
+.gif-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta el GIF sin deformarlo */
+    z-index: -1; /* Manda el GIF al fondo */
+}
+
+.texto {
+    position: relative;
+    z-index: 1;
+    color: white;
+    max-width: 800px;
+    padding: 20px;
+    text-align: justify;
+    font-size: 18px;
+    top: 300px;              /* MÁS ABAJO */
+    margin-left: 80px;       /* MÁS A LA IZQUIERDA */
+}
+
+.reproducir {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: rgba(200, 135, 238, 0.5);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;          /* Sin subrayado */
+    border-radius: 8px;
+    transition: background-color 0.3s ease;     /* Transición suave */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.reproducir:hover {
+    background-color: rgba(156, 86, 197, 0.5);
+    cursor: pointer;
+}
+
+
+
+/* Estilos para el modo oscuro */
+.modo-oscuro {
+    background-color: #1a1a1a;
+    color: 9E8AAA;
+}
+
+
+/* Estilos para el scroll */
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    font-size: 24px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #9E8AAA;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  
+
+/* Estilos para el footer */
+.footer {
+    background-color: #2e1d30; /* Un tono morado oscuro similar */
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    position: relative;
+}
+
+.footer-texto {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 18px;
+}
+
+.footer-redes {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.footer-redes a {
+    color: white;
+    font-size: 20px;
+    transition: transform 0.2s;
+}
+
+.footer-redes a:hover {
+    transform: scale(1.2);
+}
+

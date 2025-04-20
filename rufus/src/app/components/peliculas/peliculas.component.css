@@ -1,0 +1,38 @@
+
+/* Estilos para el index */
+.contenido-index img{
+    width: 100%;
+    height: 100%;;
+}
+
+.categoria {
+    margin: 40px 30px;
+}
+
+.categoria h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #684B6D;
+    margin-bottom: 15px;
+    margin-left: 25px;
+}
+
+.grid-categorias {
+    display: inline-flex;
+    gap: 80px;
+    margin-left: 25px;
+}
+
+.grid-categorias img {
+    width: 160px;       
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Efecto de transición */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    cursor: pointer;
+}
+
+.grid-categorias img:hover {
+    transform: scale(1.05);
+}

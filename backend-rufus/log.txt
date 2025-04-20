@@ -1,0 +1,5 @@
+stdClass Object
+(
+    [email] => jennihernandez8199@gmail.com
+    [password] => jenni
+)
