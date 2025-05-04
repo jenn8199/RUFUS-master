@@ -6,8 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:rufus": "node dist/rufus/server/server.mjs"
+    "serve:ssr:rufus": "node dist/rufus/server/server.mjs",
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
