@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { RecuperarComponent } from './recuperar.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('RecuperarComponent', () => {
   let component: RecuperarComponent;
@@ -8,9 +8,8 @@ describe('RecuperarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RecuperarComponent]
-    })
-    .compileComponents();
+      imports: [RecuperarComponent, HttpClientTestingModule], // Standalone component y el módulo necesario
+    }).compileComponents();
 
     fixture = TestBed.createComponent(RecuperarComponent);
     component = fixture.componentInstance;

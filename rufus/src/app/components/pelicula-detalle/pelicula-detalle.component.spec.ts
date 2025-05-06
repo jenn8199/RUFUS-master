@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { PeliculaDetalleComponent } from './pelicula-detalle.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { ActivatedRoute } from '@angular/router';
 
 describe('PeliculaDetalleComponent', () => {
   let component: PeliculaDetalleComponent;
@@ -8,9 +9,20 @@ describe('PeliculaDetalleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PeliculaDetalleComponent]
-    })
-    .compileComponents();
+      imports: [PeliculaDetalleComponent, HttpClientTestingModule],
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            snapshot: {
+              paramMap: {
+                get: () => 'mock-id'
+              }
+            }
+          }
+        }
+      ]
+    }).compileComponents();
 
     fixture = TestBed.createComponent(PeliculaDetalleComponent);
     component = fixture.componentInstance;

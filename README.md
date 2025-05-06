@@ -24,6 +24,8 @@ El objetivo principal de esta plataforma es compartir películas de terror y ser
 ![Película-detalles](rufus/capturas/peliculas-detalles.png)
 ![Recuperar](rufus/capturas/recuperar.png)
 ![Base de Datos](rufus/capturas/bd.png)
+![Prueba de karma](rufus/capturas/karma-prueba.png)
+![Prueba de que todo se ejecuta de manera correcta](rufus/capturas/prueba.png)
 
 
 ## Instrucciones ⚙️
@@ -276,9 +278,11 @@ Para importarla al servidor local:
 ## Estructura del proyecto
 ```
 RUFUS/
-├── angular.json
-├── package.json
-├── tsconfig.json
+├── rufus
+|   ├── angular.json
+|   ├── package.json
+|   ├── tsconfig.json
+|   ├── karma.conf.js
 ├── src/
 │   ├── main.ts
 │   ├── app/
@@ -320,7 +324,7 @@ Para poder ejecutar mi testing en mi máquina fue necesario ingresar la siguient
 ` npm install --save-dev karma karma-cli karma-jasmine karma-chrome-launcher karma-coverage jasmine-core karma-jasmine-html-reporter @angular-devkit/build-angular
 `
 
-
+Tuve que crear un nuevo archivo con el nombre de `karma.conf.js`, en este se encarga de llevar a cabo el testing, abriendolo desde un navegador que le asignemos.
 
 ## Problemas
 
@@ -330,17 +334,21 @@ Otro de los problemas que presenté, es como son tantas carpetas, tuve problema 
 
 Con respecto a problemas que continuo teniendo siguen siendo en de las imagenes, ya que olvido bien las direcciones, o incluso el jalar los estilos y que estos estan divididos, pero poco a poco se va haciendo más sencillo entenderlo.
 
+En esta ocasión uno de los problemas que más grandes me ha dado, es en cuestión de mi navegador, ya que la herrmaienta de karma está dando problemas en parte con mi navegador, la parte de hacerlo ejecutar o correr en mi navegador ha sido de lo más complicado.
+
+Por ahor ano he podido darle solución a mi problema presentado, ya que he tenido problemas con mi navegador, uso el de Edge, sin embargo aunque haya hecho los cambios y tal, el programa de karma insiste en abrir el navegador de Chrome, sin embargo ya lo instalé y todo, pero aún así se presentan problemas con la instalación de mi Chrome.
+
 ## Retrospectiva 
 
 > _¿Qué hice bien?_ 
 ```
-Considero que la migración hasta el momento me fue bien, a mi manera como lo voy entendiendo, quizá no sea de la manera del todo correcta la migración, pero le voy entendiendo cada vez más, lo voy haciendo a mi maner ay veo que en parte es bueno usar el angular, porqué más que nada tiene una mejor distribución de todo el contenido, aunque hasta cierto punto tanta carpeta confunde.
+Creo que he entendido la manera de desarrollo, su ejecución y funcionamiento de cada una de las herramientas que tiene consigo y trabajan de la mano con Angular, lo que es Karma y Jazmin.
 ```
 >_¿Qué no salió bien?_
 ```
-Puedo decir que en esta ocasión todo salió bien, pude migrar todo completamente lo que tenía en mi simple proyecto de html, me pareció una muy buena herramienta Angular, sin duda considero que es mejor trabajar los proyectos de esta manera, es más facil leerlo y adecuarlo.
+Quizá el testing en sí, ya que no puedo desarrollar bien el testing por problemas con mi navegador que no encuentra la ruta de mi navegador,
 ```
 >_¿Qué puedo hacer diferente?_
 ```
-Quizá tomarme más tiempo, acomodar mis tiempos y dedicar el tiempo suficiente para mejorar y realizar un mejor trabajo.
+Dedicarle más tiempo, es cierto que en esta ocasión solo le he dedicado unos pocos días en comparación de los otros proyectos, me confié y sin embargo salió un problema que no consideré y me ha detenido a su ejecución correcta del proyecto.
 ```
