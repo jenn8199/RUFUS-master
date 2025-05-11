@@ -238,41 +238,11 @@ rufus/
 ```
 
 ### Backend 💾
-Se conecta con una base de datos MySQL (rufus) a través de PHP (en una carpeta separada llamada backend-rufus).
-**La tabla principal users contiene:**
 
-+ id
-
-+ email
-
-+ password
-
-**Archivos clave:**
-
-+ conexion.php: establece conexión con MySQL
-
-+ login.php: valida los datos de acceso
-
-+ recuperar.php: permite recuperar contraseña (por ahora solo muestra un mensaje)
-
-🔐 **Credenciales de prueba**
-+ Correo: prueba@ejemplo.com
-
-+ Contraseña: 1234
 
 
 ### Base de Datos
 
-Este proyecto utiliza una base de datos MySQL llamada `users`. 
-
-[Base de datos](backend-rufus/database/users.sql)
-
-Para importarla al servidor local:
-
-1. Abre [phpMyAdmin](http://localhost/phpmyadmin)
-2. Crea una base de datos llamada `users`
-3. Ve a la pestaña "Importar"
-4. Selecciona el archivo `users.sql` y haz clic en "Continuar"
 
 
 ## Estructura del proyecto
