@@ -230,15 +230,6 @@ $resultado = $consulta->get_result();
 También agregué la un apartado de recuperar, este tanto en angular como en mi backend(`recuperar.component.html, recuperar.php`), en dado caso de olvidar la contraseña, así como la implementación de la idea de enviar al correo electronico mensaje de recuperación, pero por ahora solo será con la idea de mostrar un simple mensaje.
 
 
-Se realizó una conexión con una base de datos, esto desarrollado en PHPMyAdmin con el nombre de rufus.
-```
-rufus/
-├── users                            #Aquí está la tabla con los datos guardados
-     └── id
-     └── email
-     └── password
-```
-
 ### Lazy Loaling
 Se realizó la carga de los componentes para su implementación, esta fue definida mediante `loadComponent`. Este método se usó dentro de las rutas de la aplicación permitiendo que los componentes fuesen cargados solo cuando el usuario navegara en la ruta correspondiente.
 Un claro ejemplo de su uso e implementación es en mi archivo con la ruta `app.routes.ts`.
@@ -252,6 +243,7 @@ Un claro ejemplo de su uso e implementación es en mi archivo con la ruta `app.r
 
 Lo que se hace aquí es que carga el archivo de `login.component.js` cuando el usuario navega a la ruta `/login`.
 
+Tomando en cuenta esta implementación se agregó el archivo de `home` y `about`. Estos para dar la bienvenida de la página principal y mostrar información sobre la aplicación o del mismo proyecto en sí.
 
 ### Backend 💾
 
