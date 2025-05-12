@@ -15,6 +15,8 @@ Al seleccionar una película (por ejemplo, *Jeepers Creepers*), se redirecciona 
 
 El objetivo principal de esta plataforma es compartir películas de terror y series del género K-drama, al mismo tiempo que se implementan nuevas herramientas de desarrollo, como Angular y el uso de TypeScript en lugar de JavaScript.
 
+En este cuarto sprint uno de los objetivos es la implementación del `Lazy Loading` en donde hace la carga más lenta de las imagenes y recursos de la misma página, hace que no se use o consuma elementos sin antes no haberlas visto o ingresado a tal apartado en el que está.
+
 
 ## Imágenes 📷
 
@@ -237,6 +239,20 @@ rufus/
      └── password
 ```
 
+### Lazy Loaling
+Se realizó la carga de los componentes para su implementación, esta fue definida mediante `loadComponent`. Este método se usó dentro de las rutas de la aplicación permitiendo que los componentes fuesen cargados solo cuando el usuario navegara en la ruta correspondiente.
+Un claro ejemplo de su uso e implementación es en mi archivo con la ruta `app.routes.ts`.
+```ts
+{
+  path: 'login',
+  loadComponent: () =>
+    import('./components/login/login.component').then(m => m.LoginComponent)
+},
+```
+
+Lo que se hace aquí es que carga el archivo de `login.component.js` cuando el usuario navega a la ruta `/login`.
+
+
 ### Backend 💾
 
 
@@ -258,6 +274,19 @@ RUFUS/
 │   ├── app/
 │   │   ├── app.config.ts
 │   │   ├── app.routes.ts
+│   │   ├── about/
+│   │   │   │   ├── about-routing.module.ts
+│   │   │   │   ├── about.component.css
+│   │   │   │   ├── about.component.html
+│   │   │   │   ├── about.component.spec.ts
+│   │   │   │   ├── about.component.ts
+│   │   │   │   ├── about.module.ts
+│   │   ├── home/
+│   │   │   │   ├── home.component.css
+│   │   │   │   ├── home.component.html
+│   │   │   │   ├── home.component.spec.ts
+│   │   │   │   ├── home.component.ts
+│   │   │   │   ├── home.module.ts
 │   │   ├── components/
 │   │   │   ├── header/
 │   │   │   │   ├── header.component.ts
