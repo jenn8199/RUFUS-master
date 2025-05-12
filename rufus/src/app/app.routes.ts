@@ -28,8 +28,23 @@ export const routes: Routes = [
   // Ruta de recuperación
   {
     path: 'recuperar',
-    loadComponent: () => import('./components/recuperar/recuperar.component').then(m => m.RecuperarComponent)
-  },  
+    loadComponent: () => 
+      import('./components/recuperar/recuperar.component').then(m => m.RecuperarComponent)
+  },
+
+  // Ruta para Home
+  {
+    path: 'home',
+    loadComponent: () =>
+      import('./home/home.component').then(m => m.HomeComponent)
+  },
+
+  // Ruta para About
+  {
+    path: 'about',
+    loadComponent: () =>
+      import('./about/about.component').then(m => m.AboutComponent)
+  },
 
   // Ruta para cualquier página no encontrada
   { path: '**', redirectTo: 'login' }
