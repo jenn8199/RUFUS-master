@@ -327,7 +327,10 @@ Con respecto a problemas que continuo teniendo siguen siendo en de las imagenes,
 
 En esta ocasión uno de los problemas que más grandes me ha dado, es en cuestión de mi navegador, ya que la herrmaienta de karma está dando problemas en parte con mi navegador, la parte de hacerlo ejecutar o correr en mi navegador ha sido de lo más complicado.
 
-Por ahor ano he podido darle solución a mi problema presentado, ya que he tenido problemas con mi navegador, uso el de Edge, sin embargo aunque haya hecho los cambios y tal, el programa de karma insiste en abrir el navegador de Chrome, sin embargo ya lo instalé y todo, pero aún así se presentan problemas con la instalación de mi Chrome.
+Por ahora no he podido darle solución a mi problema presentado, ya que he tenido problemas con mi navegador, uso el de Edge, sin embargo aunque haya hecho los cambios y tal, el programa de karma insiste en abrir el navegador de Chrome, sin embargo ya lo instalé y todo, pero aún así se presentan problemas con la instalación de mi Chrome.
+Tuve una breve solución, quizá no como se debería, pero al menos tuve la correción de los errores presentados.
+
+En cuestión de la implementación de mi Lazy Loading, este si me causó un poco de problema, ya que en parte no estaba en uno del todo del Standload, y tuve que realizar varios cambios para su implementación correcta de la misma en el proyecto.
 
 ## Retrospectiva 
 
