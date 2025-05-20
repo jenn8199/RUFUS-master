@@ -25,9 +25,9 @@ En este cuarto sprint uno de los objetivos es la implementación del `Lazy Loadi
 ![Películas](rufus/capturas/peliculas2.png)
 ![Película-detalles](rufus/capturas/peliculas-detalles.png)
 ![Recuperar](rufus/capturas/recuperar.png)
-![Base de Datos](rufus/capturas/bd.png)
 ![Prueba de karma](rufus/capturas/karma-prueba.png)
 ![Prueba de que todo se ejecuta de manera correcta](rufus/capturas/prueba.png)
+![Base de Datos](rufus/capturas/bd.png)
 
 
 ## Instrucciones ⚙️
@@ -316,6 +316,10 @@ Para poder ejecutar mi testing en mi máquina fue necesario ingresar la siguient
 `
 
 Tuve que crear un nuevo archivo con el nombre de `karma.conf.js`, en este se encarga de llevar a cabo el testing, abriendolo desde un navegador que le asignemos.
+
+## Base de Datos
+Para la realización de esta misma se lleva acabo con el uso de SQL Serve, es decir, T-SQL, este con la intención de la realización y/o implementación que va de la mano con nuestro `Login`.
+El primer paso es la realización del query donde ya se muestran declaradas las variables en la imagen `db.png`.
 
 ## Problemas
 
