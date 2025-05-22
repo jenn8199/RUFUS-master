@@ -1,21 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
-import { HttpClient, HttpHeaders, HttpClientModule } from '@angular/common/http';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
-  standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, RouterModule, HttpClientModule],
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  templateUrl: './login.component.html'
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
+  mensaje = '';
 
-  // ✅ Inyectamos HttpClient en el constructor
-  constructor(private fb: FormBuilder, private http: HttpClient) {}
+  constructor(
+    private fb: FormBuilder,
+    private authService: AuthService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -25,34 +25,47 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(): void {
-    if (this.loginForm.valid) {
-      const formData = this.loginForm.value;
+    if (this.loginForm.invalid) return;
 
-      this.http.post('http://localhost/rufus-master/backend-rufus/login.php', formData, {
-        headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
-        responseType: 'text' // para respuestas tipo texto (como "ok" o "error")
-      }).subscribe(
-        (response: string) => { //Tipado del parámetro
-          console.log('Respuesta del servidor:', response);
+    const datos = {
+      correo: this.loginForm.value.email,
+      password: this.loginForm.value.password
+    };
 
-          if (response.includes('ok')) {
-            alert("Login exitoso");
-            // this.router.navigate(['/dashboard']);
-          } else {
-            alert("Credenciales incorrectas");
-          }
-        },
-        (error: any) => { //Tipado del parámetro
-          console.error('Error en la petición:', error);
-          alert("Error al conectarse con el servidor");
-        }
-      );
-    }
+    this.authService.login(datos).subscribe({
+      next: (response) => {
+        console.log(response);
+        this.mensaje = 'Login exitoso';
+        // Redirige a otra vista, por ejemplo al dashboard
+        this.router.navigate(['/dashboard']); 
+      },
+      error: (error) => {
+        console.error(error);
+        this.mensaje = 'Correo o contraseña incorrectos';
+      }
+    });
   }
 
-  goToRegister() {}
-  goToForgotPassword() {}
-  guardarDatos() {}
-  verDatosGuardados() {}
-  eliminarDatosGuardados() {}
+  // Métodos opcionales del HTML
+  goToRegister(): void {
+    this.router.navigate(['/register']);
+  }
+
+  goToForgotPassword(): void {
+    this.router.navigate(['/recuperar']);
+  }
+
+  guardarDatos(): void {
+    const { email, password } = this.loginForm.value;
+    this.authService.guardarDatos(email, password, true);
+  }
+
+  verDatosGuardados(): void {
+    const datos = this.authService.obtenerDatos(true);
+    alert(`Email: ${datos.email}, Password: ${datos.password}`);
+  }
+
+  eliminarDatosGuardados(): void {
+    this.authService.eliminarDatos(true);
+  }
 }

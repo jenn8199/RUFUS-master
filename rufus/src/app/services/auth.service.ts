@@ -1,32 +1,26 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
   private emailKey = 'userEmail';
   private passwordKey = 'userPassword';
-  private apiUrl = 'http://localhost/Angular/backend-rufus/';
+  private apiUrl = 'http://localhost:5000/api/'; // <-- CAMBIADO
 
   constructor(private http: HttpClient) {}
 
-  // Método para iniciar sesión conectándose a PHP
   login(datos: any): Observable<any> {
-    return this.http.post(this.apiUrl + 'login.php', datos, {
+    return this.http.post(this.apiUrl + 'login', datos, {
       headers: { 'Content-Type': 'application/json' }
     });
   }
 
-  // Método para recuperación de contraseña
+  // Puedes dejar estos otros métodos si los sigues usando:
   recuperarPassword(email: string): Observable<any> {
     return this.http.post(this.apiUrl + 'recuperar.php', { email }, {
       headers: { 'Content-Type': 'application/json' }
     });
   }
 
-  // LocalStorage/sessionStorage
   guardarDatos(email: string, password: string, persistente: boolean = true): void {
     const storage = persistente ? localStorage : sessionStorage;
     storage.setItem(this.emailKey, email);
