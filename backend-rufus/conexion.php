@@ -1,13 +1,18 @@
 <?php
-$host = "localhost";
-$user = "root";
-$password = ""; // sin contraseña por defecto en XAMPP
-$db = "rufus";
+$serverName = "Jennifer\\MSSQLSERVER01";
 
-$conexion = new mysqli($host, $user, $password, $db);
+$connectionOptions = array(
+    "Database" => "testdb",
+    "Authentication" => "Windows"
+);
 
-// Verifica la conexión
-if ($conexion->connect_error) {
-    die("Conexión fallida: " . $conexion->connect_error);
+$conn = sqlsrv_connect($serverName, $connectionOptions);
+
+if ($conn === false) {
+    echo "Error en la conexión:<br>";
+    print_r(sqlsrv_errors());
+    die();
+} else {
+    echo "Conexión exitosa con autenticación de Windows";
 }
 ?>

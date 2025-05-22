@@ -336,6 +336,8 @@ Tuve una breve solución, quizá no como se debería, pero al menos tuve la corr
 
 En cuestión de la implementación de mi Lazy Loading, este si me causó un poco de problema, ya que en parte no estaba en uno del todo del Standload, y tuve que realizar varios cambios para su implementación correcta de la misma en el proyecto.
 
+Por parte de la base de datos, es donde podría decir que es donde más problemas he presentado, debido a que tuve problemas con la instalación de mi SQL Server, e intenté hacer mi conexión del proyecto usando PHP, el cual sé que no es la mejor opción, pero sin embargo haré el respectivo cambio a .Net, esto para mejorar su uso.
+
 ## Retrospectiva 
 
 > _¿Qué hice bien?_ 
