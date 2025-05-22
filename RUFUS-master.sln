@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiProyectoLoginAPI", "MiProyectoLoginAPI\MiProyectoLoginAPI.csproj", "{DB7A3603-0F1B-B067-53CF-662F2227F78B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testdbLoginAPI", "testdbLoginAPI\testdbLoginAPI.csproj", "{CFF7C625-9DDF-92A3-0BC5-3457808EBD1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB7A3603-0F1B-B067-53CF-662F2227F78B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB7A3603-0F1B-B067-53CF-662F2227F78B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB7A3603-0F1B-B067-53CF-662F2227F78B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB7A3603-0F1B-B067-53CF-662F2227F78B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFF7C625-9DDF-92A3-0BC5-3457808EBD1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFF7C625-9DDF-92A3-0BC5-3457808EBD1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFF7C625-9DDF-92A3-0BC5-3457808EBD1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFF7C625-9DDF-92A3-0BC5-3457808EBD1D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B62E38A7-1AAF-4157-B9CA-A1CC4070B7D8}
+	EndGlobalSection
+EndGlobal

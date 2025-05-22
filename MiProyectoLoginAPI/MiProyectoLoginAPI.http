@@ -1,6 +1,0 @@
-@MiProyectoLoginAPI_HostAddress = http://localhost:5226
-
-GET {{MiProyectoLoginAPI_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
