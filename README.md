@@ -163,6 +163,7 @@ Para el apartado de mi `footer` utilicé mis estilos y detalles desde el `style.
 ```
 
 ### Header
+
 `header.component.html` Este se usa para el menú de `peliculas` y `pelicula-detalle`, así como también tiene las redirecciones.
 ```html
 <!-- Barra de navegación -->
@@ -191,7 +192,9 @@ Para el apartado de mi `footer` utilicé mis estilos y detalles desde el `style.
   </li>  
 </ul>
 ```
+
 ### Peliculas
+
 `peliculas.component.html` Esta es mi estructura donde se visualizan las imagenes.
 ```html
 <section class="categoria">
@@ -220,6 +223,7 @@ Para el apartado de mi `footer` utilicé mis estilos y detalles desde el `style.
 ```
 
 ### Login PHP
+
 Como parte del código del `login.php` donde consulta los datos desde la base de datos.
 ```PHP
 $consulta = $conexion->prepare("SELECT * FROM users WHERE email = ? AND password = ?");
@@ -247,10 +251,14 @@ Tomando en cuenta esta implementación se agregó el archivo de `home` y `about`
 
 ### Backend 💾
 
+He realizado un intento con la implementación de una base de datos, esta con la herramienta de SQL Server, he agregado una imagen de evidencia, la cual solo es un pequeño query. 
 
 
 ### Base de Datos
 
+Para la realización de esta misma se lleva acabo con el uso de SQL Serve, es decir, T-SQL, este con la intención de la realización y/o implementación que va de la mano con nuestro `Login`.
+El primer paso es la realización del query donde ya se muestran declaradas las variables en la imagen `db.png`.
+Como parte de la implementación de la basde de datos con la herramienta de .Net, he creado una carpeta de nombre models, y dentro de esta el archivo de nombre `Users.cs`.
 
 
 ## Estructura del proyecto
@@ -317,9 +325,6 @@ Para poder ejecutar mi testing en mi máquina fue necesario ingresar la siguient
 
 Tuve que crear un nuevo archivo con el nombre de `karma.conf.js`, en este se encarga de llevar a cabo el testing, abriendolo desde un navegador que le asignemos.
 
-## Base de Datos
-Para la realización de esta misma se lleva acabo con el uso de SQL Serve, es decir, T-SQL, este con la intención de la realización y/o implementación que va de la mano con nuestro `Login`.
-El primer paso es la realización del query donde ya se muestran declaradas las variables en la imagen `db.png`.
 
 ## Problemas
 
@@ -343,6 +348,7 @@ Por parte de la base de datos, es donde podría decir que es donde más problema
 > _¿Qué hice bien?_ 
 ```
 Creo que he entendido la manera de desarrollo, su ejecución y funcionamiento de cada una de las herramientas que tiene consigo y trabajan de la mano con Angular, lo que es Karma y Jazmin.
+Además de la implementación de lazy loading, fue algo confusa al inicio, pero considero que lo he logrado.
 ```
 >_¿Qué no salió bien?_
 ```
