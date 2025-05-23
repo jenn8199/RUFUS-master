@@ -8,11 +8,11 @@ import { Observable } from 'rxjs';
 export class AuthService {
   private emailKey = 'userEmail';
   private passwordKey = 'userPassword';
-  private apiUrl = 'http://localhost:5000/api/'; // <-- Cambia esto si usas otro puerto o dominio
+  private apiUrl = 'http://localhost:5000/api/'; 
 
   constructor(private http: HttpClient) {}
 
-  // Llama al backend .NET: POST http://localhost:5000/api/login
+  
   login(datos: { correo: string, password: string }): Observable<any> {
     return this.http.post(this.apiUrl + 'login', datos, {
       headers: { 'Content-Type': 'application/json' }
