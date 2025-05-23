@@ -1,51 +1,47 @@
 import { Routes } from '@angular/router';
+import { AuthGuard } from './auth.guard'; // Asegúrate de ajustar la ruta si el archivo está en otra carpeta
 
 export const routes: Routes = [
-  // Redirección por defecto a /login
   { path: '', redirectTo: 'login', pathMatch: 'full' },
 
-  // Ruta del login
   {
     path: 'login',
     loadComponent: () =>
       import('./components/login/login.component').then(m => m.LoginComponent)
   },
 
-  // Ruta de películas
   {
     path: 'peliculas',
+    canActivate: [AuthGuard], // 🔒 protegida
     loadComponent: () =>
       import('./components/peliculas/peliculas.component').then(m => m.PeliculasComponent)
   },
 
-  // Ruta del detalle de película
   {
     path: 'pelicula/:id',
+    canActivate: [AuthGuard], // 🔒 protegida
     loadComponent: () =>
       import('./components/pelicula-detalle/pelicula-detalle.component').then(m => m.PeliculaDetalleComponent)
   },
 
-  // Ruta de recuperación
   {
     path: 'recuperar',
-    loadComponent: () => 
+    loadComponent: () =>
       import('./components/recuperar/recuperar.component').then(m => m.RecuperarComponent)
   },
 
-  // Ruta para Home
   {
     path: 'home',
+    canActivate: [AuthGuard], // 🔒 opcional
     loadComponent: () =>
       import('./home/home.component').then(m => m.HomeComponent)
   },
 
-  // Ruta para About
   {
     path: 'about',
     loadComponent: () =>
       import('./about/about.component').then(m => m.AboutComponent)
   },
 
-  // Ruta para cualquier página no encontrada
   { path: '**', redirectTo: 'login' }
 ];

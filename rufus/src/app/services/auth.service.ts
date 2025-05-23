@@ -1,22 +1,27 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
   private emailKey = 'userEmail';
   private passwordKey = 'userPassword';
-  private apiUrl = 'http://localhost:5000/api/'; // <-- CAMBIADO
+  private apiUrl = 'http://localhost:5000/api/'; // <-- Cambia esto si usas otro puerto o dominio
 
   constructor(private http: HttpClient) {}
 
-  login(datos: any): Observable<any> {
+  // Llama al backend .NET: POST http://localhost:5000/api/login
+  login(datos: { correo: string, password: string }): Observable<any> {
     return this.http.post(this.apiUrl + 'login', datos, {
       headers: { 'Content-Type': 'application/json' }
     });
   }
 
-  // Puedes dejar estos otros métodos si los sigues usando:
+  // Puedes actualizar este endpoint si también lo migras a .NET
   recuperarPassword(email: string): Observable<any> {
-    return this.http.post(this.apiUrl + 'recuperar.php', { email }, {
+    return this.http.post(this.apiUrl + 'recuperar', { email }, {
       headers: { 'Content-Type': 'application/json' }
     });
   }

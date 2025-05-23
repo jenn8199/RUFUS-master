@@ -1,39 +1,39 @@
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using testdbLoginAPI.Data;
-using testdbLoginAPI.Models;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.EntityFrameworkCore;
+    using testdbLoginAPI.Data;
+    using testdbLoginAPI.Models;
 
-namespace testdbLoginAPI.Controllers
-{
-    [ApiController]
-    [Route("api/[controller]")]
-    public class LoginController : ControllerBase
+    namespace testdbLoginAPI.Controllers
     {
-        private readonly AppDbContext _context;
-
-        public LoginController(AppDbContext context)
+        [ApiController]
+        [Route("api/[controller]")]
+        public class LoginController : ControllerBase
         {
-            _context = context;
-        }
+            private readonly AppDbContext _context;
 
-        public class LoginRequest
-        {
-            public string Correo { get; set; }
-            public string Password { get; set; }
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Login([FromBody] LoginRequest request)
-        {
-            var user = await _context.Users
-                .FirstOrDefaultAsync(u => u.Correo == request.Correo && u.Password == request.Password);
-
-            if (user != null)
+            public LoginController(AppDbContext context)
             {
-                return Ok(new { status = "ok", message = "Inicio de sesión exitoso." });
+                _context = context;
             }
 
-            return Unauthorized(new { status = "error", message = "Correo o contraseña incorrectos." });
+            public class LoginRequest
+            {
+                public string Correo { get; set; }
+                public string Password { get; set; }
+            }
+
+            [HttpPost]
+            public async Task<IActionResult> Login([FromBody] LoginRequest request)
+            {
+                var user = await _context.Users
+                    .FirstOrDefaultAsync(u => u.Correo == request.Correo && u.Password == request.Password);
+
+                if (user != null)
+                {
+                    return Ok(new { status = "ok", message = "Inicio de sesión exitoso." });
+                }
+
+                return Unauthorized(new { status = "error", message = "Correo o contraseña incorrectos." });
+            }
         }
     }
-}

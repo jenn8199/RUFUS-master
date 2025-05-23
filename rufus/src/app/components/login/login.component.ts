@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -33,20 +33,18 @@ export class LoginComponent implements OnInit {
     };
 
     this.authService.login(datos).subscribe({
-      next: (response) => {
+      next: (response: any) => {
         console.log(response);
         this.mensaje = 'Login exitoso';
-        // Redirige a otra vista, por ejemplo al dashboard
-        this.router.navigate(['/dashboard']); 
+        this.router.navigate(['/peliculas']);
       },
-      error: (error) => {
+      error: (error: any) => {
         console.error(error);
         this.mensaje = 'Correo o contraseña incorrectos';
       }
     });
   }
 
-  // Métodos opcionales del HTML
   goToRegister(): void {
     this.router.navigate(['/register']);
   }
