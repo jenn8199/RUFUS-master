@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "MAB8OnqzxL4=",
+  "success": true,
+  "projectFilePath": "C:\\xampp\\htdocs\\RUFUS-master\\PeliculasAPI\\PeliculasAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.0\\microsoft.aspnetcore.openapi.9.0.0.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}

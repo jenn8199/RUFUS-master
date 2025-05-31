@@ -317,6 +317,7 @@ RUFUS/
 ```
 
 ## Reporte Testing
+
 Para la parte del testing, utilicé las herramientas que proporciona Angular testing, que junto con esta trabaja Jazmine que es un framework de comportamiento del usuario, este se encarga de testear bloques de código, y Karma que es un runner, una libreria o herramienta que se encarga de ejecutar las diferentes pruebas que nosotros le escribamos a Jazmin.
 
 Para poder ejecutar mi testing en mi máquina fue necesario ingresar la siguiente línea de código.
