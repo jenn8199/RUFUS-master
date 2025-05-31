@@ -264,6 +264,12 @@ Como parte de la implementación de la basde de datos con la herramienta de .Net
 ## Estructura del proyecto
 ```
 RUFUS/
+├── backend-rufus
+|   ├── Controllers
+|   ├── Data
+|   ├── database
+|   ├── Models
+|   ├── PeliculasAPI
 ├── rufus
 |   ├── angular.json
 |   ├── package.json
@@ -326,6 +332,10 @@ Para poder ejecutar mi testing en mi máquina fue necesario ingresar la siguient
 
 Tuve que crear un nuevo archivo con el nombre de `karma.conf.js`, en este se encarga de llevar a cabo el testing, abriendolo desde un navegador que le asignemos.
 
+## API - Swagger
+
+Como primera parte de la implementación de mi api y swagger, en mi terminal inserté la sigueinte línea de comando `dotnet new webapi -n PeliculasAPI`, esto para crear un archivo donde se use swagger ya configurado.
+
 
 ## Problemas
 
@@ -343,6 +353,9 @@ Tuve una breve solución, quizá no como se debería, pero al menos tuve la corr
 En cuestión de la implementación de mi Lazy Loading, este si me causó un poco de problema, ya que en parte no estaba en uno del todo del Standload, y tuve que realizar varios cambios para su implementación correcta de la misma en el proyecto.
 
 Por parte de la base de datos, es donde podría decir que es donde más problemas he presentado, debido a que tuve problemas con la instalación de mi SQL Server, e intenté hacer mi conexión del proyecto usando PHP, el cual sé que no es la mejor opción, pero sin embargo haré el respectivo cambio a .Net, esto para mejorar su uso.
+
+### Posibles mejoras
+
 
 ## Retrospectiva 
 
