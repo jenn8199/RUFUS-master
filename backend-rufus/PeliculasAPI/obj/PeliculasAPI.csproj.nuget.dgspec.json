@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\xampp\\htdocs\\RUFUS-master\\PeliculasAPI\\PeliculasAPI.csproj": {}
+    "C:\\xampp\\htdocs\\RUFUS-master\\backend-rufus\\PeliculasAPI\\PeliculasAPI.csproj": {}
   },
   "projects": {
-    "C:\\xampp\\htdocs\\RUFUS-master\\PeliculasAPI\\PeliculasAPI.csproj": {
+    "C:\\xampp\\htdocs\\RUFUS-master\\backend-rufus\\PeliculasAPI\\PeliculasAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\xampp\\htdocs\\RUFUS-master\\PeliculasAPI\\PeliculasAPI.csproj",
+        "projectUniqueName": "C:\\xampp\\htdocs\\RUFUS-master\\backend-rufus\\PeliculasAPI\\PeliculasAPI.csproj",
         "projectName": "PeliculasAPI",
-        "projectPath": "C:\\xampp\\htdocs\\RUFUS-master\\PeliculasAPI\\PeliculasAPI.csproj",
+        "projectPath": "C:\\xampp\\htdocs\\RUFUS-master\\backend-rufus\\PeliculasAPI\\PeliculasAPI.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\xampp\\htdocs\\RUFUS-master\\PeliculasAPI\\obj\\",
+        "outputPath": "C:\\xampp\\htdocs\\RUFUS-master\\backend-rufus\\PeliculasAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -53,6 +53,10 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[8.1.2, )"
             }
           },
           "imports": [
