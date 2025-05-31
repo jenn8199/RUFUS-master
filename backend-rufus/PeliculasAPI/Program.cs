@@ -1,13 +1,13 @@
 var builder = WebApplication.CreateBuilder(args);
 
-// ✅ Agrega Swagger correctamente
+//Agrega Swagger correctamente
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddControllers(); // ⬅️ Esto faltaba
+builder.Services.AddControllers(); 
 
 var app = builder.Build();
 
-// ✅ Configura Swagger para desarrollo
+//Configura Swagger para desarrollo
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -16,9 +16,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization(); // Por si luego agregas autenticación
+app.UseAuthorization(); // Por si luego agrego autenticación
 
-app.MapControllers(); // ⬅️ Esto también faltaba (para usar PeliculasController)
+app.MapControllers(); 
 
 var summaries = new[]
 {

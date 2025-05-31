@@ -5,6 +5,18 @@
     height: 100%;;
 }
 
+.info-pelicula {
+  text-align: center;
+  color: #fff; 
+  margin-top: 0.5rem;
+}
+
+.grid-categorias a {
+  display: inline-block;
+  margin: 10px;
+  text-decoration: none;
+}
+
 .categoria {
     margin: 40px 30px;
 }

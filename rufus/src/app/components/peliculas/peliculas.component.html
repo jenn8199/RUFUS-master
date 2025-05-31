@@ -1,43 +1,35 @@
-<app-header></app-header>
-
-  <!-- Contenido principal -->
-<section class="contenido-index">
-  <img src="assets/img/fondo-index.jpg" alt="imagen de fondo del login">
-</section>
-
-<section class="categoria">
+<!-- Terror -->
+<section class="categoria" *ngIf="peliculas.length">
   <h2>Terror</h2>
   <div class="grid-categorias">
-    <a [routerLink]="['/pelicula', 1]">
-      <img src="assets/img/terror1.jpg" alt="Test imagen" width="200">
-    </a>
-    <a href="#"><img src="assets/img/terror2.jpg" alt="Scream"></a>
-    <a href="#"><img src="assets/img/terror3.jpg" alt="Cadáver"></a>
-    <a href="#"><img src="assets/img/terror4.jpg" alt="Espíritus"></a>
-    <a href="#"><img src="assets/img/terror5.jpg" alt="La noche del Demonio"></a>
+    <ng-container *ngFor="let pelicula of peliculas">
+      <ng-container *ngIf="pelicula.genero === 'Terror'">
+        <a [routerLink]="['/pelicula', pelicula.id]">
+          <img [src]="pelicula.imagen" [alt]="pelicula.titulo" width="200">
+          <div class="info-pelicula">
+            <h3>{{ pelicula.titulo }}</h3>
+            <p>{{ pelicula.anio }}</p>
+          </div>
+        </a>
+      </ng-container>
+    </ng-container>
   </div>
 </section>
 
-<section class="categoria">
-<h2>K-Dramas</h2>
+<!-- K-Dramas -->
+<section class="categoria" *ngIf="peliculas.length">
+  <h2>K-Dramas</h2>
   <div class="grid-categorias">
-      <a href="#"><img src="assets/img/kdrama1.jpg" alt="Strong Woman"></a>
-      <a href="#"><img src="assets/img/kdrama2.jpg" alt="UnderCover"></a>
-      <a href="#"><img src="assets/img/kdrama3.jpg" alt="Night Has Come"></a>
-      <a href="#"><img src="assets/img/kdrama4.jpg" alt="Leap Day"></a>
-      <a href="#"><img src="assets/img/kdrama5.jpg" alt="Love Out Loud"></a>
+    <ng-container *ngFor="let pelicula of peliculas">
+      <ng-container *ngIf="pelicula.genero === 'KDrama'">
+        <a [routerLink]="['/pelicula', pelicula.id]">
+          <img [src]="pelicula.imagen" [alt]="pelicula.titulo" width="200">
+          <div class="info-pelicula">
+            <h3>{{ pelicula.titulo }}</h3>
+            <p>{{ pelicula.anio }}</p>
+          </div>
+        </a>
+      </ng-container>
+    </ng-container>
   </div>
 </section>
-
-<button id="scrollTopBtn" title="Volver arriba">↑</button>
-
-<footer class="footer">
-  <div class="footer-texto">
-      Rufus Derechos reservados 2025
-  </div>
-  <div class="footer-redes">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-  </div>
-</footer>
