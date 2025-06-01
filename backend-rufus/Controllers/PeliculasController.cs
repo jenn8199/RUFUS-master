@@ -44,10 +44,5 @@ namespace PeliculasAPI.Controllers
         public string Genero { get; set; }
         public int Anio { get; set; }
         public string Imagen { get; set; }
-
-        public Pelicula()
-        {
-            Imagen = "assets/img/terror1.jpg"; // Imagen por defecto
-        }
     }
 }

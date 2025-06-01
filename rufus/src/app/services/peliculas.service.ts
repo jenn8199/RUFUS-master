@@ -14,8 +14,7 @@ export interface Pelicula {
   providedIn: 'root'
 })
 export class PeliculasService {
-
-  private apiUrl = 'http://localhost:5108/api/peliculas'; // Ajusta el puerto si es otro
+  private apiUrl = 'http://localhost:5108/api/peliculas'; // URL backend
 
   constructor(private http: HttpClient) {}
 

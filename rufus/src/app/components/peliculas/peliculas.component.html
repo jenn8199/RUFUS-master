@@ -1,35 +1,43 @@
-<!-- Terror -->
-<section class="categoria" *ngIf="peliculas.length">
-  <h2>Terror</h2>
-  <div class="grid-categorias">
-    <ng-container *ngFor="let pelicula of peliculas">
-      <ng-container *ngIf="pelicula.genero === 'Terror'">
-        <a [routerLink]="['/pelicula', pelicula.id]">
-          <img [src]="pelicula.imagen" [alt]="pelicula.titulo" width="200">
-          <div class="info-pelicula">
-            <h3>{{ pelicula.titulo }}</h3>
-            <p>{{ pelicula.anio }}</p>
-          </div>
-        </a>
-      </ng-container>
-    </ng-container>
-  </div>
-</section>
+<app-header></app-header>
 
-<!-- K-Dramas -->
-<section class="categoria" *ngIf="peliculas.length">
-  <h2>K-Dramas</h2>
-  <div class="grid-categorias">
-    <ng-container *ngFor="let pelicula of peliculas">
-      <ng-container *ngIf="pelicula.genero === 'KDrama'">
-        <a [routerLink]="['/pelicula', pelicula.id]">
-          <img [src]="pelicula.imagen" [alt]="pelicula.titulo" width="200">
-          <div class="info-pelicula">
-            <h3>{{ pelicula.titulo }}</h3>
-            <p>{{ pelicula.anio }}</p>
-          </div>
-        </a>
+<ng-container *ngIf="peliculas.length; else noPeliculas">
+  <!-- Terror -->
+  <section class="categoria">
+    <h2>Terror</h2>
+    <div class="grid-categorias">
+      <ng-container *ngFor="let pelicula of peliculas">
+        <ng-container *ngIf="pelicula.genero === 'Terror'">
+          <a [routerLink]="['/pelicula', pelicula.id]" [attr.aria-label]="pelicula.titulo">
+            <img [src]="pelicula.imagen" [alt]="pelicula.titulo" width="200" />
+            <div class="info-pelicula">
+              <h3>{{ pelicula.titulo }}</h3>
+              <p>{{ pelicula.anio }}</p>
+            </div>
+          </a>
+        </ng-container>
       </ng-container>
-    </ng-container>
-  </div>
-</section>
+    </div>
+  </section>
+
+  <!-- K-Dramas -->
+  <section class="categoria">
+    <h2>K-Dramas</h2>
+    <div class="grid-categorias">
+      <ng-container *ngFor="let pelicula of peliculas">
+        <ng-container *ngIf="pelicula.genero === 'KDrama'">
+          <a [routerLink]="['/pelicula', pelicula.id]" [attr.aria-label]="pelicula.titulo">
+            <img [src]="pelicula.imagen" [alt]="pelicula.titulo" width="200" />
+            <div class="info-pelicula">
+              <h3>{{ pelicula.titulo }}</h3>
+              <p>{{ pelicula.anio }}</p>
+            </div>
+          </a>
+        </ng-container>
+      </ng-container>
+    </div>
+  </section>
+</ng-container>
+
+<ng-template #noPeliculas>
+  <p>No hay películas disponibles en este momento.</p>
+</ng-template>

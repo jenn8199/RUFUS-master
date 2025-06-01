@@ -18,8 +18,8 @@ export class PeliculasComponent implements OnInit {
   constructor(private peliculasService: PeliculasService) {}
 
   ngOnInit(): void {
-    this.peliculasService.getPeliculas().subscribe(data => {
-      this.peliculas = data;
-    });
+    this.peliculasService.getPeliculas().subscribe((data: Pelicula[]) => {
+  this.peliculas = data;
+  });
   }
 }
