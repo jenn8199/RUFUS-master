@@ -1,37 +1,39 @@
 import { Component, OnInit } from '@angular/core';
-// ActivatedRoute nos permite acceder a parámetros de la URL, como el id de la película
 import { ActivatedRoute } from '@angular/router';
-// Importamos el servicio que obtiene las películas y la interfaz Pelicula
 import { PeliculasService, Pelicula } from '../../services/peliculas.service';
-// Importamos el componente header para usarlo dentro de este componente standalone
 import { HeaderComponent } from '../header/header.component';
+import { CommonModule } from '@angular/common'; // Necesario para usar *ngIf
 
 @Component({
   selector: 'app-pelicula-detalle',
-  standalone: true,             // Este componente es standalone (sin módulo)
-  imports: [HeaderComponent],   // Aquí indicamos que usaremos el HeaderComponent dentro de este componente
-  templateUrl: './pelicula-detalle.component.html',  // Archivo HTML para la vista
-  styleUrls: ['./pelicula-detalle.component.css']    // Archivo CSS con estilos para este componente
+  standalone: true, // Componente standalone
+  imports: [HeaderComponent, CommonModule], // Importamos módulos necesarios
+  templateUrl: './pelicula-detalle.component.html',
+  styleUrls: ['./pelicula-detalle.component.css']
 })
 export class PeliculaDetalleComponent implements OnInit {
-  // Variable para almacenar la película que se mostrará en el detalle
-  pelicula: Pelicula | null = null;
+  pelicula: Pelicula | null = null; // Variable que almacenará la película
 
-  // Inyectamos ActivatedRoute para leer parámetros y el servicio para obtener datos de películas
   constructor(
-    private route: ActivatedRoute,
-    private peliculasService: PeliculasService
+    private route: ActivatedRoute, // Para obtener el parámetro "id" de la ruta
+    private peliculasService: PeliculasService // Servicio para obtener la película
   ) {}
 
-  // Este método se ejecuta al iniciar el componente
   ngOnInit(): void {
-    // Obtenemos el id de la película desde la URL (como string), lo convertimos a número
-    const id = Number(this.route.snapshot.paramMap.get('id'));
+  const idParam = this.route.snapshot.paramMap.get('id');
+  const id = idParam ? Number(idParam) : NaN;
 
-    // Llamamos al servicio para obtener la película por id
-    this.peliculasService.getPelicula(id).subscribe(data => {
-      // Guardamos la película obtenida para mostrarla en el template
-      this.pelicula = data;
-    });
+  if (isNaN(id)) {
+    console.error('ID de película inválido');
+    return; // o mostrar un mensaje de error / redireccionar
   }
+
+  this.peliculasService.getPelicula(id).subscribe({
+  next: data => this.pelicula = data,
+  error: err => {
+    console.error('Error al cargar la película', err);
+    // Opcional: mostrar mensaje de error o navegar a otra página
+  }
+});
+}
 }

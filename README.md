@@ -95,7 +95,7 @@ Para la primera parte con la que se comienza es el `login.component.html`, en es
 Para este archivo únicamente agregué la estructura y formulario que debe de llevar, la imagen en los estilos `login.component.css`, lo que vendría siendo como el menú y lo principal, va en el apartado de `index.html` tomando los valores globales para todos los demás archivos.
 Algo que vi necesario hacer y muy util fue, que para hacer o poner el menú en ambos apartados que utilizo, fue el hacer un archivo de nombre `header`, en este ponerlo e usarlo para ambos, el de `peliculas` y `peliculas-detalle`, para no repetir código y solo implementar una extensión.
 
-Para el apartado de mi `footer` utilicé mis estilos y detalles desde el `style.css` global, para que se tome directamente.
+Para el apartado de mi `footer` utilicé mis estilos y detalles desde el `styles.css` global, para que se tome directamente.
 
 Se realizó la implementación de la carpeta de `PeliculasAPI`, esta con intención de que se pueda usar el API y Swagger, así como también el CORS, esto se ha editado desde el archivo de `Program.cs`, la implementación del CORS permitirá que la api acepte peticiones desde otra url.
 

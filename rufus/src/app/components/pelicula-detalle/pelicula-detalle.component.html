@@ -1,39 +1,31 @@
 <app-header></app-header>
 
-<!-- Solo mostramos esta sección si 'pelicula' ya tiene datos -->
+<!-- Sección principal: solo se muestra si ya se ha cargado la película -->
 <section class="container-pelicula" *ngIf="pelicula; else cargando">
   <div class="fondo-gif">
     <div class="texto">
-      <!-- Título de la película -->
-      <h2>{{ pelicula?.titulo }}</h2>
+      <h2>{{ pelicula.titulo }}</h2>
+      <p><strong>Año:</strong> {{ pelicula.anio }}</p>
+      <p><strong>Género:</strong> {{ pelicula.genero }}</p>
+      <p>{{ pelicula.descripcion }}</p>
 
-      <!-- Año y género -->
-      <p><strong>Año:</strong> {{ pelicula?.anio }}</p>
-      <p><strong>Género:</strong> {{ pelicula?.genero }}</p>
-
-      <!-- Descripción o sinopsis -->
-      <p>{{ pelicula?.descripcion }}</p>
-
-      <!-- Link para ver el tráiler en una nueva pestaña -->
-      <a [href]="pelicula?.trailerUrl" target="_blank" rel="noopener" class="reproducir">Ver Tráiler</a>
+      <!-- Enlace al tráiler (abre en una nueva pestaña) -->
+      <a [href]="pelicula.trailerUrl" target="_blank" rel="noopener" class="reproducir">Ver Tráiler</a>
     </div>
 
-    <!-- Imagen o gif representativo de la película -->
-    <img [src]="pelicula?.imagen" [alt]="pelicula?.titulo" class="gif-fondo" />
-
+    <!-- Imagen principal (por ejemplo, fondo animado o afiche) -->
+    <img [src]="pelicula.imagen" [alt]="pelicula.titulo" class="gif-fondo" />
   </div>
 </section>
 
-<!-- Template alternativo mientras carga la película -->
+<!-- Template alternativo: se muestra mientras se carga la película -->
 <ng-template #cargando>
   <p>Cargando detalles de la película...</p>
 </ng-template>
 
-<!-- Pie de página con derechos y redes sociales -->
+<!-- Pie de página -->
 <footer class="footer">
-  <div class="footer-texto">
-    Rufus Derechos reservados 2025
-  </div>
+  <div class="footer-texto">Rufus Derechos reservados 2025</div>
   <div class="footer-redes">
     <a href="#"><i class="fab fa-facebook-f"></i></a>
     <a href="#"><i class="fab fa-twitter"></i></a>

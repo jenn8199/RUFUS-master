@@ -73,7 +73,7 @@ namespace PeliculasAPI.Controllers
                 Imagen = "assets/img/kdrama3.jpg",
                 Descripcion = "Un policía se infiltra en una preparatoria para investigar un crimen.",
                 TrailerUrl = "https://youtu.be/fake-trailer-url"
-            }
+            },
             new Pelicula {
                 Id = 8,
                 Titulo = "Night Has Come",

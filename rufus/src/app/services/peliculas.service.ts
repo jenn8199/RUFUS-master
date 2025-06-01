@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
+// Interfaz para tipar una película
 export interface Pelicula {
   id: number;
   titulo: string;
@@ -12,20 +13,23 @@ export interface Pelicula {
   trailerUrl: string;
 }
 
+// Decorador que indica que es un servicio disponible globalmente
 @Injectable({
   providedIn: 'root'
 })
 export class PeliculasService {
-  private apiUrl = 'http://localhost:5108/api/peliculas'; // URL backend
+  // URL del backend (.NET) para consumir películas
+  private apiUrl = '/api/peliculas';
+
 
   constructor(private http: HttpClient) {}
 
-  // Obtener todas las películas
+  // Método para obtener todas las películas
   getPeliculas(): Observable<Pelicula[]> {
     return this.http.get<Pelicula[]>(this.apiUrl);
   }
 
-  // Obtener una película por id
+  // Método para obtener una película por ID
   getPelicula(id: number): Observable<Pelicula> {
     return this.http.get<Pelicula>(`${this.apiUrl}/${id}`);
   }
