@@ -1,12 +1,16 @@
+<!-- Sección encabezado -->
 <app-header></app-header>
 
+<!-- Si hay películas, mostramos categorías -->
 <ng-container *ngIf="peliculas.length; else noPeliculas">
-  <!-- Terror -->
+
+  <!-- Categoría: Terror -->
   <section class="categoria">
     <h2>Terror</h2>
     <div class="grid-categorias">
       <ng-container *ngFor="let pelicula of peliculas">
         <ng-container *ngIf="pelicula.genero === 'Terror'">
+          <!-- Al hacer clic, navega a /pelicula/ID -->
           <a [routerLink]="['/pelicula', pelicula.id]" [attr.aria-label]="pelicula.titulo">
             <img [src]="pelicula.imagen" [alt]="pelicula.titulo" width="200" />
             <div class="info-pelicula">
@@ -19,12 +23,13 @@
     </div>
   </section>
 
-  <!-- K-Dramas -->
+  <!-- Categoría: K-Dramas -->
   <section class="categoria">
     <h2>K-Dramas</h2>
     <div class="grid-categorias">
       <ng-container *ngFor="let pelicula of peliculas">
         <ng-container *ngIf="pelicula.genero === 'KDrama'">
+          <!-- Igual que arriba: navegación por routerLink -->
           <a [routerLink]="['/pelicula', pelicula.id]" [attr.aria-label]="pelicula.titulo">
             <img [src]="pelicula.imagen" [alt]="pelicula.titulo" width="200" />
             <div class="info-pelicula">
@@ -36,8 +41,10 @@
       </ng-container>
     </div>
   </section>
+
 </ng-container>
 
+<!-- Si no hay películas, se muestra este mensaje -->
 <ng-template #noPeliculas>
   <p>No hay películas disponibles en este momento.</p>
 </ng-template>

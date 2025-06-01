@@ -1,27 +1,42 @@
 <app-header></app-header>
 
-    <section class="container-pelicula">
-        <div class="fondo-gif">
-            <div class="texto">
-                <p>
-                    Trish Jenner (Gina Philips) y su hermano menor Derry (Justin Long) cruzan los Estados Unidos en coche, en un viaje largo y aburrido cuya monotonía sólo se rompe por sus continuas discusiones. De pronto, en mitad de ninguna parte, descubren una iglesia abandonada cuyo tejado está cubierto por una espesa bandada de cuervos y ven como un misterioso personaje arroja un bulto al interior de una gran boca del alcantarillado. A partir de ese momento comienzan una huída aterradora, perseguidos por una de las criaturas más letales que se pueda imaginar.
-                </p>
-                <a href="https://youtu.be/hmKnm2jH_2Y?si=M8UmtavmgAYMJeAz" class="reproducir">Reproducir</a>
-            </div>
-            <img src="assets/img/jeepers.gif" alt="gif de la pelicula Jeepers Creepers" class="gif-fondo">
-            
-        </div>
-    </section>
-      
-    <footer class="footer">
-        <div class="footer-texto">
-            Rufus Derechos reservados 2025
-        </div>
-        <div class="footer-redes">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-    </footer> 
-        
-    <script src="scripts/script.js"></script>
+<!-- Solo mostramos esta sección si 'pelicula' ya tiene datos -->
+<section class="container-pelicula" *ngIf="pelicula; else cargando">
+  <div class="fondo-gif">
+    <div class="texto">
+      <!-- Título de la película -->
+      <h2>{{ pelicula?.titulo }}</h2>
+
+      <!-- Año y género -->
+      <p><strong>Año:</strong> {{ pelicula?.anio }}</p>
+      <p><strong>Género:</strong> {{ pelicula?.genero }}</p>
+
+      <!-- Descripción o sinopsis -->
+      <p>{{ pelicula?.descripcion }}</p>
+
+      <!-- Link para ver el tráiler en una nueva pestaña -->
+      <a [href]="pelicula?.trailerUrl" target="_blank" rel="noopener" class="reproducir">Ver Tráiler</a>
+    </div>
+
+    <!-- Imagen o gif representativo de la película -->
+    <img [src]="pelicula?.imagen" [alt]="pelicula?.titulo" class="gif-fondo" />
+
+  </div>
+</section>
+
+<!-- Template alternativo mientras carga la película -->
+<ng-template #cargando>
+  <p>Cargando detalles de la película...</p>
+</ng-template>
+
+<!-- Pie de página con derechos y redes sociales -->
+<footer class="footer">
+  <div class="footer-texto">
+    Rufus Derechos reservados 2025
+  </div>
+  <div class="footer-redes">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+  </div>
+</footer>

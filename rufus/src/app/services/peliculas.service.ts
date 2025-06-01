@@ -8,6 +8,8 @@ export interface Pelicula {
   genero: string;
   anio: number;
   imagen: string;
+  descripcion: string;
+  trailerUrl: string;
 }
 
 @Injectable({

@@ -1,24 +1,31 @@
-<!-- Barra de navegación -->
+<!-- Barra de navegación principal -->
 <ul class="nav">
+  <!-- Icono a la izquierda, podría ser un logo o un botón -->
   <li class="nav-item nav-left">
-    <i class="fas fa-play"></i>
+    <i class="fas fa-play"></i> <!-- Icono de play de FontAwesome -->
   </li>
 
+  <!-- Título o logo del sitio, link a la página principal de películas -->
   <li class="nav-item nav-title">
     <a [routerLink]="['/peliculas']" class="nav-link-title">RUFUS</a>
   </li>
 
+  <!-- Enlace a la página Home (películas) -->
   <li class="nav-item nav-right">
     <a [routerLink]="['/peliculas']" class="nav-link">Home</a>
   </li>
 
+  <!-- Menú desplegable para perfil de usuario -->
   <li class="nav-item nav-right perfil-dropdown">
+    <!-- Botón o texto que muestra el perfil y el icono de usuario -->
     <span id="perfilBtn">Perfil <i class="fas fa-user"></i></span>
+    <!-- Menú desplegable oculto inicialmente con opción para cerrar sesión -->
     <div id="menuPerfil" class="menu-perfil">
       <a [routerLink]="['/login']">Cerrar sesión</a>
     </div>
   </li>      
 
+  <!-- Botón para activar modo oscuro (dark mode) -->
   <li class="nav-item nav-right">
     <button id="darkToggle" class="nav-link">🌙</button>
   </li>  

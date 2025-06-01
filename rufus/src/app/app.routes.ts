@@ -17,12 +17,13 @@ export const routes: Routes = [
       import('./components/peliculas/peliculas.component').then(m => m.PeliculasComponent)
   },
 
-  {
-    path: 'pelicula/:id',
-    canActivate: [AuthGuard], // 🔒 protegida
-    loadComponent: () =>
-      import('./components/pelicula-detalle/pelicula-detalle.component').then(m => m.PeliculaDetalleComponent)
-  },
+ {
+  path: 'pelicula/:id',
+  loadComponent: () =>
+    import('./components/pelicula-detalle/pelicula-detalle.component').then(
+      (m) => m.PeliculaDetalleComponent
+    )
+},
 
   {
     path: 'recuperar',
