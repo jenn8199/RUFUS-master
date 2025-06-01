@@ -97,6 +97,8 @@ Algo que vi necesario hacer y muy util fue, que para hacer o poner el menú en a
 
 Para el apartado de mi `footer` utilicé mis estilos y detalles desde el `style.css` global, para que se tome directamente.
 
+Se realizó la implementación de la carpeta de `PeliculasAPI`, esta con intención de que se pueda usar el API y Swagger, así como también el CORS, esto se ha editado desde el archivo de `Program.cs`, la implementación del CORS permitirá que la api acepte peticiones desde otra url.
+
 ### Login HTML
 `login.component.html`
 ```html

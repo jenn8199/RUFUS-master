@@ -18,10 +18,12 @@ export class PeliculasService {
 
   constructor(private http: HttpClient) {}
 
+  // Obtener todas las películas
   getPeliculas(): Observable<Pelicula[]> {
     return this.http.get<Pelicula[]>(this.apiUrl);
   }
 
+  // Obtener una película por id
   getPelicula(id: number): Observable<Pelicula> {
     return this.http.get<Pelicula>(`${this.apiUrl}/${id}`);
   }
