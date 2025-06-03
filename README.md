@@ -28,6 +28,7 @@ En este cuarto sprint uno de los objetivos es la implementación del `Lazy Loadi
 ![Prueba de karma](rufus/capturas/karma-prueba.png)
 ![Prueba de que todo se ejecuta de manera correcta](rufus/capturas/prueba.png)
 ![Base de Datos](rufus/capturas/bd.png)
+![Base de Datos](rufus/capturas/Swagger.png)
 
 
 ## Instrucciones ⚙️
@@ -101,6 +102,7 @@ Algo que vi necesario hacer y muy util fue, que para hacer o poner el menú en a
 Para el apartado de mi `footer` utilicé mis estilos y detalles desde el `styles.css` global, para que se tome directamente.
 
 Se realizó la implementación de la carpeta de `PeliculasAPI`, esta con intención de que se pueda usar el API y Swagger, así como también el CORS, esto se ha editado desde el archivo de `Program.cs`, la implementación del CORS permitirá que la api acepte peticiones desde otra url.
+También se crearon más carpetas donde estas se usaron para la implementación de la base de datos con sql serve, que lo use en al login.
 
 ### Login HTML
 `login.component.html`
@@ -270,11 +272,18 @@ Como parte de la implementación de la basde de datos con la herramienta de .Net
 ```
 RUFUS/
 ├── backend-rufus
-|   ├── Controllers
-|   ├── Data
 |   ├── database
-|   ├── Models
 |   ├── PeliculasAPI
+|   |       ├── Controllers
+|   |       |     ├── LoginController.cs
+|   |       |     ├── PeliculasController.cs
+|   |       ├── Data
+|   |       |     ├── AppDbContext.cs
+|   |       ├── Models
+|   |       |     ├── LoginRequest.cs
+|   |       |     ├── Pelicula.cs
+|   |       |     ├── User.cs
+|   |       ├── Program.cs
 ├── rufus
 |   ├── angular.json
 |   ├── package.json
@@ -359,8 +368,11 @@ En cuestión de la implementación de mi Lazy Loading, este si me causó un poco
 
 Por parte de la base de datos, es donde podría decir que es donde más problemas he presentado, debido a que tuve problemas con la instalación de mi SQL Server, e intenté hacer mi conexión del proyecto usando PHP, el cual sé que no es la mejor opción, pero sin embargo haré el respectivo cambio a .Net, esto para mejorar su uso.
 
-### Posibles mejoras
 
+Al momento de realizar lo de Swagger, si fue una de mis partes más conplicadas porque me costó entenderlo, además de que tuve errores al poner mis carpetas, las tenía en carpetas donde no debería, más bien las tenía fuera de la carpeta de donde debería.
+
+### Posibles mejoras
+Quizá una de las mejoras más importantes que debería de hacer es la implementación de un registro, mejoras en la basede dato, más seguridad de la misma y en general del mismo proyecto en sí, aún me faltaría comentar lo más importante de las funciones de mi código, que es lo que más me tomará tiempo.
 
 ## Retrospectiva 
 
