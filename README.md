@@ -88,6 +88,9 @@ ng serve --open
 
 - zone.js | 0.15.0                     #Permite a Angular detectar cambios automáticamente (change detection)
 
+- Entity Framework Core .NET Command-line Tools
+9.0.5
+
 ## Descripción del desarrollo 🛠️
 
 Para la primera parte con la que se comienza es el `login.component.html`, en este realicé algunos cambios, aún la idea no es clara del todo, pero pretendo o me gustaría agregar algunas opciones para que el usuario pueda visualizar, guardar sus datos al ingresar a la plataforma, así como también pueda eliminarlos cuando vea necesario.
