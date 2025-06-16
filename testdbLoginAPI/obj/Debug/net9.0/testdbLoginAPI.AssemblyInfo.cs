@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("testdbLoginAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5dc85b9ddef82879797e553364402303a3c356aa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89b12b9e656a23f7d417bfe0ab1ec3ae19ffb72f")]
 [assembly: System.Reflection.AssemblyProductAttribute("testdbLoginAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("testdbLoginAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
