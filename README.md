@@ -30,6 +30,10 @@ En este cuarto sprint uno de los objetivos es la implementación del `Lazy Loadi
 ![Base de Datos](rufus/capturas/bd.png)
 ![Base de Datos](rufus/capturas/Swagger.png)
 ![Visual Basic 6](rufus/capturas/VB6.png)
+![Visual Basic 6](rufus/capturas/vb6_2.png)
+![Visual Basic 6](rufus/capturas/vb6_3.png)
+![Visual Basic 6](rufus/capturas/vb6_4.png)
+![Visual Basic 6](rufus/capturas/vb6_5.png)
 
 
 ## Instrucciones ⚙️
