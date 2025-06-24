@@ -29,6 +29,7 @@ En este cuarto sprint uno de los objetivos es la implementación del `Lazy Loadi
 ![Prueba de que todo se ejecuta de manera correcta](rufus/capturas/prueba.png)
 ![Base de Datos](rufus/capturas/bd.png)
 ![Base de Datos](rufus/capturas/Swagger.png)
+![Visual Basic 6](rufus/capturas/VB6.png)
 
 
 ## Instrucciones ⚙️
@@ -370,6 +371,9 @@ Por parte de la base de datos, es donde podría decir que es donde más problema
 
 
 Al momento de realizar lo de Swagger, si fue una de mis partes más conplicadas porque me costó entenderlo, además de que tuve errores al poner mis carpetas, las tenía en carpetas donde no debería, más bien las tenía fuera de la carpeta de donde debería.
+
+### VB&
+Como parte de los problemas que presenté, fue que al momento de hacer mi proyecto de visual basic 6, este no me permitío acceder nuevamente, no pude abrir mi proyecto, inclusive lo busqué en las carpetas pero no pude acceder al proyecto realizado, subo como parte de mi evidencia que lo volví a realizar, claro no está completo, ya que no me ha dado el tiempo necesario para lograr terminarlo y cumplir su función.
 
 ### Posibles mejoras
 Quizá una de las mejoras más importantes que debería de hacer es la implementación de un registro, mejoras en la basede dato, más seguridad de la misma y en general del mismo proyecto en sí, aún me faltaría comentar lo más importante de las funciones de mi código, que es lo que más me tomará tiempo.
